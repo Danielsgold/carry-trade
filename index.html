@@ -563,6 +563,9 @@
       <div class="sub" id="sub-spread">funding − investment</div>
     </div>
   </div>
+  <div id="rates-ref-note" style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:-24px;margin-bottom:24px;padding:0 4px;line-height:1.6;">
+    câmbio spot: dinâmico (open.er-api.com) · inflação: dinâmica (World Bank CPI) · taxas de juros: estáticas, atualizadas em <span id="rates-update-date">—</span> · fontes: BCB, Fed, ECB, BoE, BoJ, SNB
+  </div>
  
   <!-- Manual spot fallback (hidden by default) -->
   <div id="manual-spot-row" style="display:none;align-items:center;gap:12px;background:var(--surface);border:1px solid rgba(255,107,53,0.3);border-radius:10px;padding:14px 18px;margin-bottom:16px;">
@@ -797,25 +800,25 @@
  
 const CURRENCIES = {
   BRL: {
-    name: 'Real Brasileiro', flag: '🇧🇷', rate: 13.75,
+    name: 'Real Brasileiro', flag: '🇧🇷', rate: 14.75,
     source: 'BCB · Selic', hint: 'avg selic — simulated',
     inflation: 4.8, inflationTarget: 3.0,
     rateHistory: [{y:1999,r:19.00},{y:2000,r:15.75},{y:2001,r:19.00},{y:2002,r:25.00},{y:2003,r:16.50},{y:2004,r:17.75},{y:2005,r:18.00},{y:2006,r:13.25},{y:2007,r:11.25},{y:2008,r:13.75},{y:2009,r:8.75},{y:2010,r:10.75},{y:2011,r:11.00},{y:2012,r:7.25},{y:2013,r:10.00},{y:2014,r:11.75},{y:2015,r:14.25},{y:2016,r:13.75},{y:2017,r:7.00},{y:2018,r:6.50},{y:2019,r:4.50},{y:2020,r:2.00},{y:2021,r:9.25},{y:2022,r:13.75},{y:2023,r:11.75},{y:2024,r:12.25},{y:2025,r:14.75}]
   },
   USD: {
-    name: 'Dólar Americano', flag: '🇺🇸', rate: 4.50,
+    name: 'Dólar Americano', flag: '🇺🇸', rate: 3.625,
     source: 'Fed · Fed Funds', hint: 'avg fed funds — simulated',
     inflation: 2.8, inflationTarget: 2.0,
     rateHistory: [{y:1999,r:5.50},{y:2000,r:6.50},{y:2001,r:1.75},{y:2002,r:1.25},{y:2003,r:1.00},{y:2004,r:2.25},{y:2005,r:4.25},{y:2006,r:5.25},{y:2007,r:4.25},{y:2008,r:0.25},{y:2009,r:0.25},{y:2010,r:0.25},{y:2011,r:0.25},{y:2012,r:0.25},{y:2013,r:0.25},{y:2014,r:0.25},{y:2015,r:0.50},{y:2016,r:0.75},{y:2017,r:1.50},{y:2018,r:2.50},{y:2019,r:1.75},{y:2020,r:0.25},{y:2021,r:0.25},{y:2022,r:4.50},{y:2023,r:5.50},{y:2024,r:4.50},{y:2025,r:4.50}]
   },
   EUR: {
-    name: 'Euro', flag: '🇪🇺', rate: 3.65,
+    name: 'Euro', flag: '🇪🇺', rate: 2.00,
     source: 'BCE · Deposit Rate', hint: 'avg ecb rate — simulated',
     inflation: 2.3, inflationTarget: 2.0,
     rateHistory: [{y:1999,r:3.00},{y:2000,r:4.75},{y:2001,r:3.25},{y:2002,r:2.75},{y:2003,r:2.00},{y:2004,r:2.00},{y:2005,r:2.25},{y:2006,r:3.50},{y:2007,r:4.00},{y:2008,r:2.50},{y:2009,r:1.00},{y:2010,r:1.00},{y:2011,r:1.00},{y:2012,r:0.75},{y:2013,r:0.25},{y:2014,r:0.05},{y:2015,r:0.05},{y:2016,r:0.00},{y:2017,r:0.00},{y:2018,r:0.00},{y:2019,r:0.00},{y:2020,r:0.00},{y:2021,r:0.00},{y:2022,r:2.50},{y:2023,r:4.00},{y:2024,r:3.15},{y:2025,r:2.65}]
   },
   GBP: {
-    name: 'Libra Esterlina', flag: '🇬🇧', rate: 4.75,
+    name: 'Libra Esterlina', flag: '🇬🇧', rate: 4.50,
     source: 'BoE · Bank Rate', hint: 'avg bank rate — simulated',
     inflation: 3.2, inflationTarget: 2.0,
     rateHistory: [{y:1999,r:5.50},{y:2000,r:6.00},{y:2001,r:4.00},{y:2002,r:4.00},{y:2003,r:3.75},{y:2004,r:4.75},{y:2005,r:4.50},{y:2006,r:5.00},{y:2007,r:5.50},{y:2008,r:2.00},{y:2009,r:0.50},{y:2010,r:0.50},{y:2011,r:0.50},{y:2012,r:0.50},{y:2013,r:0.50},{y:2014,r:0.50},{y:2015,r:0.50},{y:2016,r:0.25},{y:2017,r:0.50},{y:2018,r:0.75},{y:2019,r:0.75},{y:2020,r:0.10},{y:2021,r:0.25},{y:2022,r:3.50},{y:2023,r:5.25},{y:2024,r:4.75},{y:2025,r:4.50}]
@@ -827,12 +830,15 @@ const CURRENCIES = {
     rateHistory: [{y:1999,r:0.00},{y:2000,r:0.25},{y:2001,r:0.10},{y:2002,r:0.10},{y:2003,r:0.10},{y:2004,r:0.10},{y:2005,r:0.10},{y:2006,r:0.25},{y:2007,r:0.50},{y:2008,r:0.10},{y:2009,r:0.10},{y:2010,r:0.10},{y:2011,r:0.10},{y:2012,r:0.10},{y:2013,r:0.10},{y:2014,r:0.10},{y:2015,r:0.10},{y:2016,r:-0.10},{y:2017,r:-0.10},{y:2018,r:-0.10},{y:2019,r:-0.10},{y:2020,r:-0.10},{y:2021,r:-0.10},{y:2022,r:-0.10},{y:2023,r:-0.10},{y:2024,r:0.25},{y:2025,r:0.50}]
   },
   CHF: {
-    name: 'Franco Suíço', flag: '🇨🇭', rate: 1.00,
+    name: 'Franco Suíço', flag: '🇨🇭', rate: 0.25,
     source: 'SNB · Policy Rate', hint: 'avg snb rate — simulated',
     inflation: 1.1, inflationTarget: 2.0,
     rateHistory: [{y:1999,r:1.50},{y:2000,r:3.50},{y:2001,r:1.75},{y:2002,r:0.75},{y:2003,r:0.25},{y:2004,r:0.75},{y:2005,r:1.00},{y:2006,r:2.00},{y:2007,r:2.75},{y:2008,r:0.50},{y:2009,r:0.25},{y:2010,r:0.25},{y:2011,r:0.00},{y:2012,r:0.00},{y:2013,r:0.00},{y:2014,r:-0.25},{y:2015,r:-0.75},{y:2016,r:-0.75},{y:2017,r:-0.75},{y:2018,r:-0.75},{y:2019,r:-0.75},{y:2020,r:-0.75},{y:2021,r:-0.75},{y:2022,r:1.00},{y:2023,r:1.75},{y:2024,r:0.50},{y:2025,r:0.25}]
   },
 };
+ 
+// Date when static rates were last verified against central bank sources
+var RATES_UPDATED = '26/mar/2026';
  
 let spotRate = null;
  
@@ -861,6 +867,7 @@ window.addEventListener('DOMContentLoaded', function() {
   populateSelects();
   initFxChart();
   initFxDrag();
+  document.getElementById('rates-update-date').textContent = RATES_UPDATED;
   onCurrencyChange();
 });
  
@@ -1874,3 +1881,4 @@ function fetchWithTimeout(url, ms) {
 </script>
 </body>
 </html>
+ 
