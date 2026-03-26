@@ -23,9 +23,9 @@
     --mono: 'DM Mono', monospace;
     --sans: 'DM Sans', sans-serif;
   }
-
+ 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   body {
     background: var(--bg);
     color: var(--text);
@@ -34,7 +34,7 @@
     line-height: 1.6;
     min-height: 100vh;
   }
-
+ 
   /* Grid noise texture */
   body::before {
     content: '';
@@ -47,7 +47,7 @@
     pointer-events: none;
     z-index: 0;
   }
-
+ 
   .app {
     position: relative;
     z-index: 1;
@@ -55,7 +55,7 @@
     margin: 0 auto;
     padding: 40px 24px;
   }
-
+ 
   /* Header */
   header {
     display: flex;
@@ -65,7 +65,7 @@
     padding-bottom: 24px;
     border-bottom: 1px solid var(--border);
   }
-
+ 
   .header-title h1 {
     font-family: var(--mono);
     font-size: 22px;
@@ -73,18 +73,18 @@
     letter-spacing: -0.5px;
     color: var(--text);
   }
-
+ 
   .header-title h1 span {
     color: var(--accent);
   }
-
+ 
   .header-title p {
     font-size: 12px;
     color: var(--muted);
     margin-top: 4px;
     font-family: var(--mono);
   }
-
+ 
   .status-pill {
     display: flex;
     align-items: center;
@@ -96,25 +96,25 @@
     border: 1px solid var(--border);
     border-radius: 20px;
   }
-
+ 
   .status-dot {
     width: 6px;
     height: 6px;
     border-radius: 50%;
     background: var(--muted);
   }
-
+ 
   .status-dot.live {
     background: var(--accent);
     box-shadow: 0 0 6px var(--accent);
     animation: pulse 2s infinite;
   }
-
+ 
   @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
   }
-
+ 
   /* Section labels */
   .section-label {
     font-family: var(--mono);
@@ -125,7 +125,7 @@
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-
+ 
   /* Currency selector */
   .currency-row {
     display: grid;
@@ -134,7 +134,7 @@
     align-items: center;
     margin-bottom: 32px;
   }
-
+ 
   .currency-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -142,9 +142,9 @@
     padding: 20px;
     transition: border-color 0.2s;
   }
-
+ 
   .currency-card:hover { border-color: var(--border2); }
-
+ 
   .currency-card label {
     font-family: var(--mono);
     font-size: 10px;
@@ -154,7 +154,7 @@
     display: block;
     margin-bottom: 10px;
   }
-
+ 
   .currency-card select {
     width: 100%;
     background: var(--surface2);
@@ -170,7 +170,7 @@
     transition: border-color 0.2s;
     letter-spacing: 0.01em;
   }
-
+ 
   .currency-card select option {
     font-family: var(--mono);
     font-size: 13px;
@@ -178,15 +178,15 @@
     color: var(--text);
     padding: 6px 0;
   }
-
+ 
   .currency-card select:focus { border-color: var(--accent); }
-
+ 
   .currency-flag {
     font-size: 28px;
     margin-bottom: 8px;
     display: block;
   }
-
+ 
   .vs-divider {
     text-align: center;
     font-family: var(--mono);
@@ -197,14 +197,14 @@
     align-items: center;
     gap: 8px;
   }
-
+ 
   .vs-divider::before, .vs-divider::after {
     content: '';
     width: 1px;
     height: 30px;
     background: var(--border);
   }
-
+ 
   /* Data grid */
   .data-grid {
     display: grid;
@@ -212,14 +212,14 @@
     gap: 12px;
     margin-bottom: 32px;
   }
-
+ 
   .data-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 16px 20px;
   }
-
+ 
   .data-card .label {
     font-family: var(--mono);
     font-size: 10px;
@@ -228,35 +228,35 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
-
+ 
   .data-card .value {
     font-family: var(--mono);
     font-size: 22px;
     font-weight: 300;
     color: var(--text);
   }
-
+ 
   .data-card .value.loading {
     color: var(--muted);
     font-size: 14px;
     animation: blink 1s step-end infinite;
   }
-
+ 
   .data-card .value span.unit {
     font-size: 13px;
     color: var(--muted);
     margin-left: 4px;
   }
-
+ 
   .data-card .sub {
     font-family: var(--mono);
     font-size: 10px;
     color: var(--muted);
     margin-top: 4px;
   }
-
+ 
   @keyframes blink { 50% { opacity: 0; } }
-
+ 
   /* Simulation panel */
   .sim-panel {
     background: var(--surface);
@@ -265,20 +265,20 @@
     padding: 24px;
     margin-bottom: 32px;
   }
-
+ 
   .sim-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-bottom: 24px;
   }
-
+ 
   .input-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
-
+ 
   .input-group label {
     font-family: var(--mono);
     font-size: 10px;
@@ -286,7 +286,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
   }
-
+ 
   .input-row {
     display: flex;
     align-items: center;
@@ -296,9 +296,9 @@
     overflow: hidden;
     transition: border-color 0.2s;
   }
-
+ 
   .input-row:focus-within { border-color: var(--accent); }
-
+ 
   .input-row input {
     flex: 1;
     background: transparent;
@@ -310,21 +310,21 @@
     outline: none;
     width: 100%;
   }
-
+ 
   .input-row .unit {
     padding: 10px 14px 10px 0;
     font-family: var(--mono);
     font-size: 12px;
     color: var(--muted);
   }
-
+ 
   .input-hint {
     font-family: var(--mono);
     font-size: 10px;
     color: var(--muted);
     font-style: italic;
   }
-
+ 
   /* Results */
   .results-panel {
     background: var(--surface);
@@ -333,21 +333,21 @@
     padding: 24px;
     margin-bottom: 32px;
   }
-
+ 
   .results-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-bottom: 24px;
   }
-
+ 
   .result-card {
     background: var(--surface2);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 16px 20px;
   }
-
+ 
   .result-card .r-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -356,17 +356,17 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
-
+ 
   .result-card .r-value {
     font-family: var(--mono);
     font-size: 24px;
     font-weight: 300;
   }
-
+ 
   .result-card .r-value.positive { color: var(--positive); }
   .result-card .r-value.negative { color: var(--negative); }
   .result-card .r-value.neutral { color: var(--accent2); }
-
+ 
   .result-card .r-sub {
     font-family: var(--mono);
     font-size: 10px;
@@ -374,7 +374,7 @@
     margin-top: 6px;
     line-height: 1.5;
   }
-
+ 
   /* Verdict banner */
   .verdict {
     border-radius: 10px;
@@ -384,13 +384,13 @@
     border: 1px solid;
     line-height: 1.7;
   }
-
+ 
   .verdict.gap { background: rgba(0,212,170,0.06); border-color: rgba(0,212,170,0.3); color: var(--positive); }
   .verdict.nogap { background: rgba(255,71,87,0.06); border-color: rgba(255,71,87,0.3); color: var(--negative); }
   .verdict.neutral { background: rgba(0,151,255,0.06); border-color: rgba(0,151,255,0.3); color: var(--accent2); }
-
+ 
   .verdict strong { display: block; font-size: 13px; margin-bottom: 4px; }
-
+ 
   /* Chart */
   .chart-panel {
     background: var(--surface);
@@ -399,19 +399,19 @@
     padding: 24px;
     margin-bottom: 32px;
   }
-
+ 
   .chart-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
   }
-
+ 
   .chart-legend {
     display: flex;
     gap: 20px;
   }
-
+ 
   .legend-item {
     display: flex;
     align-items: center;
@@ -420,15 +420,15 @@
     font-size: 11px;
     color: var(--muted);
   }
-
+ 
   .legend-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
   }
-
+ 
   canvas { max-height: 280px; }
-
+ 
   .period-btn {
     font-family: var(--mono);
     font-size: 11px;
@@ -443,7 +443,7 @@
   }
   .period-btn:hover { border-color: var(--accent); color: var(--accent); }
   .period-btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 500; }
-
+ 
   /* Footer */
   footer {
     border-top: 1px solid var(--border);
@@ -454,7 +454,7 @@
     display: flex;
     justify-content: space-between;
   }
-
+ 
   /* Responsive */
   @media (max-width: 768px) {
     .data-grid { grid-template-columns: repeat(2, 1fr); }
@@ -467,7 +467,7 @@
 </head>
 <body>
 <div class="app">
-
+ 
   <header>
     <div class="header-title">
       <h1>carry<span>·</span>trade <span>// CIP calculator</span></h1>
@@ -478,27 +478,27 @@
       <span id="status-text">aguardando</span>
     </div>
   </header>
-
+ 
   <!-- Currency selector -->
   <div class="section-label">01 · currency pair</div>
   <div class="currency-row">
     <div class="currency-card">
       <label>funding currency</label>
-      <span class="currency-flag" id="flag-base">🇧🇷</span>
+      <span class="currency-flag" id="flag-base">🇯🇵</span>
       <select id="sel-base" onchange="onCurrencyChange()"></select>
     </div>
-
+ 
     <div class="vs-divider">
       <button id="swap-btn" onclick="swapCurrencies()" title="Swap currencies" style="background:var(--surface2);border:1px solid var(--border2);color:var(--muted);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;margin:8px auto;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border2)';this.style.color='var(--muted)'">⇄</button>
     </div>
-
+ 
     <div class="currency-card">
       <label>investment currency</label>
-      <span class="currency-flag" id="flag-target">🇯🇵</span>
+      <span class="currency-flag" id="flag-target">🇧🇷</span>
       <select id="sel-target" onchange="onCurrencyChange()"></select>
     </div>
   </div>
-
+ 
   <!-- Inflation context bar -->
   <div id="inflation-bar" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;">
     <div id="infl-base" class="data-card" style="display:flex;align-items:center;gap:16px;padding:14px 20px;">
@@ -538,7 +538,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- Market data -->
   <div class="section-label">02 · market data · <span style="color:var(--accent);font-size:9px">live fx: open.er-api.com · inflation: World Bank · rates: central bank sources</span></div>
   <div class="data-grid">
@@ -563,7 +563,7 @@
       <div class="sub" id="sub-spread">funding − investment</div>
     </div>
   </div>
-
+ 
   <!-- Manual spot fallback (hidden by default) -->
   <div id="manual-spot-row" style="display:none;align-items:center;gap:12px;background:var(--surface);border:1px solid rgba(255,107,53,0.3);border-radius:10px;padding:14px 18px;margin-bottom:16px;">
     <span style="font-family:var(--mono);font-size:11px;color:var(--warn);white-space:nowrap" id="manual-spot-label">câmbio spot</span>
@@ -574,8 +574,8 @@
     <button onclick="applyManualSpot()" style="background:var(--warn);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-family:var(--mono);font-size:12px;cursor:pointer;white-space:nowrap">aplicar</button>
     <span style="font-family:var(--mono);font-size:10px;color:var(--muted)">fontes automáticas indisponíveis · insira o valor do Google Finance ou Banco Central</span>
   </div>
-
-
+ 
+ 
   <!-- Simulation inputs -->
   <div class="section-label">03 · premissas da simulação · entrada manual</div>
   <div class="sim-panel">
@@ -598,11 +598,11 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- Results -->
   <div class="section-label">04 · results · covered interest parity</div>
   <div class="results-panel">
-
+ 
     <!-- Break-even hero card -->
     <div id="breakeven-card" style="background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:20px;display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;">
       <div style="flex:1;min-width:200px;">
@@ -612,7 +612,7 @@
       </div>
       <div style="flex:2;min-width:260px;">
         <div class="r-label" style="margin-bottom:10px;">margem de segurança do carry</div>
-
+ 
         <!-- Linha de cotações: break-even ←——————→ spot -->
         <div style="display:flex;align-items:center;gap:0;margin-bottom:6px;font-family:var(--mono);font-size:10px;">
           <div style="text-align:left;min-width:90px;">
@@ -630,11 +630,11 @@
             <div style="color:var(--text);font-size:13px;font-weight:500;" id="gauge-right">—</div>
           </div>
         </div>
-
+ 
         <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:4px;line-height:1.7;" id="gauge-desc">—</div>
       </div>
     </div>
-
+ 
     <div class="results-grid" style="grid-template-columns:1fr 1fr;">
       <div class="result-card">
         <div class="r-label">spot rate</div>
@@ -648,7 +648,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- Auto-backtest section -->
   <div class="section-label">05 · backtest automático · todas as janelas disponíveis</div>
   <div class="results-panel" id="autobt-panel">
@@ -656,10 +656,20 @@
       <div style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;"></div>
       selecione um par de moedas para iniciar
     </div>
-
+ 
     <!-- Summary verdict -->
     <div id="autobt-verdict" style="display:none;" class="verdict neutral">—</div>
-
+ 
+    <!-- Spread tolerance control -->
+    <div id="autobt-tolerance-row" style="display:none;margin-top:12px;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);">
+      <span>filtro de spread comparável: ±</span>
+      <div class="input-row" style="max-width:80px;">
+        <input type="number" id="autobt-tolerance" value="2" step="0.5" min="0.5" max="10" style="font-size:13px;padding:6px 10px;" oninput="updateAutobtVerdict()">
+        <span class="unit">pp</span>
+      </div>
+      <span id="autobt-similar-text" style="color:var(--text);">—</span>
+    </div>
+ 
     <!-- Stats row -->
     <div id="autobt-stats" style="display:none;margin-top:16px;display:none;gap:20px;flex-wrap:wrap;">
       <div class="result-card" style="flex:1;min-width:140px;">
@@ -683,7 +693,7 @@
         <div class="r-value negative" id="autobt-worst">—</div>
       </div>
     </div>
-
+ 
     <!-- Results table -->
     <div id="autobt-table-wrap" style="display:none;margin-top:16px;overflow-x:auto;">
       <table id="autobt-table" style="width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11px;">
@@ -700,77 +710,11 @@
       </table>
     </div>
   </div>
-
-  <!-- Manual backtest section -->
-  <div class="section-label">06 · backtest manual · operação histórica de 1 ano</div>
-  <div class="results-panel" id="bt-panel">
-    <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:20px;">
-      <div class="input-group" style="min-width:180px;">
-        <label>ano de entrada</label>
-        <div class="input-row">
-          <select id="bt-entry-year" style="flex:1;background:transparent;border:none;color:var(--text);font-family:var(--mono);font-size:16px;padding:10px 14px;outline:none;cursor:pointer;appearance:none;"></select>
-          <span class="unit">jan 01</span>
-        </div>
-        <span class="input-hint">entrada e saída no 1º dia útil de cada ano · datas exatas via API</span>
-      </div>
-      <div id="bt-rates-preview" style="flex:1;min-width:200px;font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.8;padding:10px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;">
-        selecione um ano para ver as taxas vigentes
-      </div>
-      <button onclick="runBacktest()" id="bt-run-btn" style="background:var(--surface2);color:var(--accent);border:1px solid var(--accent);border-radius:8px;padding:11px 20px;font-family:var(--mono);font-size:12px;cursor:pointer;letter-spacing:1px;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='#000'" onmouseout="this.style.background='var(--surface2)';this.style.color='var(--accent)'">
-        SIMULAR
-      </button>
-    </div>
-
-    <!-- Loading -->
-    <div id="bt-loading" style="display:none;font-family:var(--mono);font-size:11px;color:var(--muted);padding:8px 0;align-items:center;gap:8px;">
-      <div style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;display:inline-block;margin-right:8px;"></div>
-      buscando câmbio histórico...
-    </div>
-
-    <!-- Results grid -->
-    <div id="bt-results" style="display:none;">
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;" id="bt-cards-grid">
-        <div class="result-card">
-          <div class="r-label">câmbio na entrada</div>
-          <div class="r-value neutral" id="bt-entry-fx">—</div>
-          <div class="r-sub" id="bt-entry-date-lbl">—</div>
-        </div>
-        <div class="result-card">
-          <div class="r-label">câmbio na saída</div>
-          <div class="r-value neutral" id="bt-exit-fx">—</div>
-          <div class="r-sub" id="bt-exit-date-lbl">—</div>
-        </div>
-        <div class="result-card">
-          <div class="r-label">variação cambial realizada</div>
-          <div class="r-value" id="bt-fx-change">—</div>
-          <div class="r-sub">saída vs entrada</div>
-        </div>
-        <div class="result-card">
-          <div class="r-label">carry bruto acumulado</div>
-          <div class="r-value positive" id="bt-carry">—</div>
-          <div class="r-sub" id="bt-carry-sub">diferencial de juros · 1 ano</div>
-        </div>
-        <div class="result-card">
-          <div class="r-label">break-even histórico</div>
-          <div class="r-value neutral" id="bt-breakeven">—</div>
-          <div class="r-sub">câmbio de saída que zeraria o carry</div>
-        </div>
-        <div class="result-card">
-          <div class="r-label">retorno líquido realizado</div>
-          <div class="r-value" id="bt-net">—</div>
-          <div class="r-sub">carry − variação cambial</div>
-        </div>
-      </div>
-      <div class="verdict neutral" id="bt-verdict">—</div>
-    </div>
-
-    <div id="bt-error" style="display:none;font-family:var(--mono);font-size:11px;color:var(--warn);padding:8px 0;">—</div>
-  </div>
-
+ 
   <!-- Chart FX history -->
-  <div class="section-label">07 · histórico cambial · spot vs break-even</div>
+  <div class="section-label">06 · histórico cambial · spot vs break-even</div>
   <div class="chart-panel" id="fx-history-panel">
-
+ 
     <!-- Header row: title + period selector -->
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
       <div>
@@ -786,7 +730,7 @@
         <button onclick="setFxPeriod(60)" id="btn-5a"  class="period-btn">5A</button>
       </div>
     </div>
-
+ 
     <!-- Stats bar: variation + high + low -->
     <div id="fx-stats-bar" style="display:none;gap:24px;margin-bottom:16px;flex-wrap:wrap;">
       <div>
@@ -807,13 +751,13 @@
         <div style="font-family:var(--mono);font-size:16px;font-weight:300;color:var(--accent);" id="fx-stat-be">—</div>
       </div>
     </div>
-
+ 
     <!-- Loading -->
     <div id="fx-history-loading" style="display:flex;font-family:var(--mono);font-size:11px;color:var(--muted);padding:20px 0;align-items:center;gap:8px;">
       <div style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;"></div>
       buscando histórico cambial...
     </div>
-
+ 
     <div style="position:relative;cursor:crosshair;" id="fx-chart-wrap">
       <canvas id="chart-fx" style="display:none;"></canvas>
       <div id="fx-drag-overlay" style="position:absolute;top:0;bottom:0;background:rgba(0,212,170,0.08);border-left:1px solid var(--accent);border-right:1px solid var(--accent);display:none;pointer-events:none;"></div>
@@ -839,18 +783,18 @@
       <button onclick="clearFxDrag()" style="margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--muted);background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;">limpar ✕</button>
     </div>
   </div>
-
-
+ 
+ 
   <footer>
     <span>CIP calculator · paridade coberta de juros · fins educacionais</span>
     <span>fx data: open.er-api.com · inflation: World Bank · rates: public central bank sources</span>
   </footer>
-
+ 
 </div>
-
+ 
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
-
+ 
 const CURRENCIES = {
   BRL: {
     name: 'Real Brasileiro', flag: '🇧🇷', rate: 13.75,
@@ -889,17 +833,16 @@ const CURRENCIES = {
     rateHistory: [{y:1999,r:1.50},{y:2000,r:3.50},{y:2001,r:1.75},{y:2002,r:0.75},{y:2003,r:0.25},{y:2004,r:0.75},{y:2005,r:1.00},{y:2006,r:2.00},{y:2007,r:2.75},{y:2008,r:0.50},{y:2009,r:0.25},{y:2010,r:0.25},{y:2011,r:0.00},{y:2012,r:0.00},{y:2013,r:0.00},{y:2014,r:-0.25},{y:2015,r:-0.75},{y:2016,r:-0.75},{y:2017,r:-0.75},{y:2018,r:-0.75},{y:2019,r:-0.75},{y:2020,r:-0.75},{y:2021,r:-0.75},{y:2022,r:1.00},{y:2023,r:1.75},{y:2024,r:0.50},{y:2025,r:0.25}]
   },
 };
-
+ 
 let spotRate = null;
-
+ 
 // ─── Concurrency guards ─────────────────────────────────────────────────────
 // Prevents stale async results from overwriting newer ones.
 let fetchSpotGeneration = 0;
 let fetchFxHistoryGeneration = 0;
-let backtestGeneration = 0;
-
+ 
 // ─── INIT ────────────────────────────────────────────────────────────────────
-
+ 
 function populateSelects() {
   const selBase   = document.getElementById('sel-base');
   const selTarget = document.getElementById('sel-target');
@@ -913,17 +856,16 @@ function populateSelects() {
   selBase.value   = 'JPY';
   selTarget.value = 'BRL';
 }
-
+ 
 window.addEventListener('DOMContentLoaded', function() {
-  populateBtYears();
   populateSelects();
   initFxChart();
   initFxDrag();
   onCurrencyChange();
 });
-
+ 
 // ─── SWAP ─────────────────────────────────────────────────────────────────────
-
+ 
 function swapCurrencies() {
   const selBase   = document.getElementById('sel-base');
   const selTarget = document.getElementById('sel-target');
@@ -932,20 +874,20 @@ function swapCurrencies() {
   selTarget.value = tmp;
   onCurrencyChange();
 }
-
+ 
 // ─── INFLATION · WORLD BANK API ──────────────────────────────────────────────
 // Fetches CPI inflation (annual %) from World Bank Open Data.
 // API: free, no key, CORS enabled.
 // Indicator: FP.CPI.TOTL.ZG = Inflation, consumer prices (annual %)
 // Uses mrnev=1 to get the most recent non-empty value per country.
-
+ 
 // World Bank uses ISO2 for countries, EMU for Eurozone
 var WB_CODE_MAP = {
   BRL: 'BR', USD: 'US', EUR: 'EMU', GBP: 'GB', JPY: 'JP', CHF: 'CH'
 };
-
+ 
 var inflationCache = {};  // code -> { value, year }
-
+ 
 async function fetchInflation() {
   var codes = Object.values(WB_CODE_MAP).join(';');
   var url = 'https://api.worldbank.org/v2/country/' + codes
@@ -956,7 +898,7 @@ async function fetchInflation() {
     // World Bank returns [metadata, dataArray]
     var data = Array.isArray(json) && json.length >= 2 ? json[1] : null;
     if (!data || !Array.isArray(data)) throw new Error('invalid response');
-
+ 
     // Build reverse map: WB code -> currency code
     // WB may return country.id as ISO2 (BR, US, GB, JP, CH) or special (XC for EMU)
     var reverseMap = {};
@@ -965,7 +907,7 @@ async function fetchInflation() {
     }
     // EMU sometimes returns as XC in country.id
     reverseMap['XC'] = 'EUR';
-
+ 
     data.forEach(function(entry) {
       if (!entry || typeof entry.value !== 'number') return;
       var id2 = (entry.country && entry.country.id || '').toUpperCase();
@@ -979,61 +921,61 @@ async function fetchInflation() {
     // Silently fall back to static data
   }
 }
-
+ 
 function renderInflationBar(side, code) {
   var prefix = 'infl-' + side;
   var d = CURRENCIES[code];
   document.getElementById(prefix + '-code').textContent = code;
-
+ 
   var cached = inflationCache[code];
   var infVal = cached ? cached.value : d.inflation;
   var year   = cached ? cached.year  : 'estático';
   var isLive = !!cached;
-
+ 
   var target = d.inflationTarget;
   var infColor = infVal > target * 1.5 ? '#ff4757'
                : infVal > target       ? '#ff6b35'
                : '#00d4aa';
-
+ 
   document.getElementById(prefix + '-val').textContent = infVal.toFixed(1) + '%';
   document.getElementById(prefix + '-val').style.color = infColor;
   document.getElementById(prefix + '-meta').textContent =
     (isLive ? 'CPI ' + year + ' · World Bank' : year + ' · dado estático');
-
+ 
   // Bar: scale 0 to max(target*2.5, 8, infVal*1.2)
   var barMax = Math.max(target * 2.5, 8, infVal * 1.2);
   var fillPct = Math.min(Math.max(infVal / barMax * 100, 0), 100);
   var targetPct = Math.min(Math.max(target / barMax * 100, 0), 100);
-
+ 
   document.getElementById(prefix + '-fill').style.width = fillPct.toFixed(1) + '%';
   document.getElementById(prefix + '-fill').style.background = infColor;
   document.getElementById(prefix + '-target-mark').style.left = targetPct.toFixed(1) + '%';
   document.getElementById(prefix + '-target-label').textContent = 'meta: ' + target.toFixed(1) + '%';
 }
-
+ 
 async function updateInflationBars() {
   var bCode = document.getElementById('sel-base').value;
   var tCode = document.getElementById('sel-target').value;
-
+ 
   // Show loading state
   document.getElementById('infl-base-meta').textContent = 'buscando...';
   document.getElementById('infl-target-meta').textContent = 'buscando...';
-
+ 
   // Fetch if cache is empty
   if (Object.keys(inflationCache).length === 0) {
     await fetchInflation();
   }
-
+ 
   renderInflationBar('base', bCode);
   renderInflationBar('target', tCode);
 }
-
+ 
 // ─── CURRENCY CHANGE ─────────────────────────────────────────────────────────
-
+ 
 function onCurrencyChange() {
   const bCode = document.getElementById('sel-base').value;
   const tCode = document.getElementById('sel-target').value;
-
+ 
   // Prevent same-currency pair
   if (bCode === tCode) {
     const codes = Object.keys(CURRENCIES);
@@ -1044,37 +986,36 @@ function onCurrencyChange() {
       }
     }
   }
-
+ 
   const b = CURRENCIES[document.getElementById('sel-base').value];
   const t = CURRENCIES[document.getElementById('sel-target').value];
   const base   = document.getElementById('sel-base').value;
   const target = document.getElementById('sel-target').value;
-
+ 
   document.getElementById('flag-base').textContent   = b.flag;
   document.getElementById('flag-target').textContent = t.flag;
   document.getElementById('lbl-rate-base-sim').textContent   = `funding rate · ${base} avg (% p.a.)`;
   document.getElementById('lbl-rate-target-sim').textContent = `investment rate · ${target} avg (% p.a.)`;
   document.getElementById('hint-base').textContent   = b.hint;
   document.getElementById('hint-target').textContent = t.hint;
-
+ 
   document.getElementById('val-rate-base').innerHTML   = `${b.rate.toFixed(2)}<span class="unit">%</span>`;
   document.getElementById('sub-rate-base').textContent = b.source;
   document.getElementById('val-rate-target').innerHTML = `${t.rate.toFixed(2)}<span class="unit">%</span>`;
   document.getElementById('sub-rate-target').textContent = t.source;
   document.getElementById('inp-rate-base').value  = b.rate;
   document.getElementById('inp-rate-target').value = t.rate;
-
+ 
   // Reset spot to force fresh fetch — avoids stale spot from previous pair
   spotRate = null;
-
+ 
   fetchSpot(base, target);
-  updateBtPreview();
   updateInflationBars();
   runAutoBacktest();
 }
-
+ 
 // ─── FETCH SPOT · FALLBACK CHAIN ─────────────────────────────────────────────
-
+ 
 const SOURCES = [
   {
     name: 'open.er-api.com',
@@ -1105,60 +1046,60 @@ const SOURCES = [
     }
   }
 ];
-
+ 
 async function fetchSpot(base, target) {
   var thisGen = ++fetchSpotGeneration;
-
+ 
   var dot     = document.getElementById('status-dot');
   var stxt    = document.getElementById('status-text');
   var valSpot = document.getElementById('val-spot');
   var subSpot = document.getElementById('sub-spot');
-
+ 
   dot.className    = 'status-dot';
   stxt.textContent = 'buscando...';
   valSpot.innerHTML = '<span class="loading">buscando câmbio...</span>';
   document.getElementById('manual-spot-row').style.display = 'none';
-
+ 
   for (var i = 0; i < SOURCES.length; i++) {
     var source = SOURCES[i];
     try {
       stxt.textContent = source.name + '...';
       var result = await source.fetch(base, target);
-
+ 
       // Guard: if user changed pair while we were fetching, discard
       if (thisGen !== fetchSpotGeneration) return;
-
+ 
       var rate = result.rate;
       var date = result.date;
-
+ 
       // Validate rate
       if (!isFinite(rate) || rate <= 0) throw new Error('invalid rate');
-
+ 
       spotRate = rate;
       var d = new Date(date);
       var dateStr = isNaN(d.getTime()) ? '' : d.toLocaleDateString('pt-BR');
-
+ 
       valSpot.innerHTML = fmt(rate, 4) + '<span class="unit">' + target + '/' + base + '</span>';
       subSpot.textContent = (dateStr ? 'atualizado ' + dateStr + ' · ' : '') + 'fonte: ' + source.name;
-
+ 
       dot.className    = 'status-dot live';
       stxt.textContent = 'dados ao vivo';
-
+ 
       var spread = parseFloat(document.getElementById('inp-rate-base').value) -
                    parseFloat(document.getElementById('inp-rate-target').value);
       document.getElementById('val-spread').innerHTML = (spread >= 0 ? '+' : '') + fmt(spread,2) + '<span class="unit">pp</span>';
       document.getElementById('sub-spread').textContent = base + ' − ' + target;
       calculate();
       return;
-
+ 
     } catch(e) {
       // silently try next source
     }
   }
-
+ 
   // Guard: if user changed pair, don't show manual input for old pair
   if (thisGen !== fetchSpotGeneration) return;
-
+ 
   // All sources failed — show manual input
   valSpot.innerHTML = '<span class="loading">fontes indisponíveis</span>';
   subSpot.textContent = 'insira o câmbio manualmente abaixo';
@@ -1167,7 +1108,7 @@ async function fetchSpot(base, target) {
   document.getElementById('manual-spot-row').style.display = 'flex';
   document.getElementById('manual-spot-label').textContent = 'câmbio spot ' + target + '/' + base;
 }
-
+ 
 function applyManualSpot() {
   var val = parseFloat(document.getElementById('manual-spot-input').value);
   var base   = document.getElementById('sel-base').value;
@@ -1183,44 +1124,44 @@ function applyManualSpot() {
   document.getElementById('val-spread').innerHTML = (spread >= 0 ? '+' : '') + fmt(spread,2) + '<span class="unit">pp</span>';
   calculate();
 }
-
+ 
 // ─── CALCULATE ────────────────────────────────────────────────────────────────
-
+ 
 function calculate() {
   if (!spotRate || !isFinite(spotRate)) return;
-
+ 
   var iBase    = parseFloat(document.getElementById('inp-rate-base').value)   / 100;
   var iTarget  = parseFloat(document.getElementById('inp-rate-target').value) / 100;
   var T        = 1;  // fixed 1-year horizon
   var bCode    = document.getElementById('sel-base').value;
   var tCode    = document.getElementById('sel-target').value;
-
+ 
   if (!isFinite(iBase) || !isFinite(iTarget)) return;
-
+ 
   // Guard: prevent division by zero with extreme rate values
   if (1 + iTarget === 0 || 1 + iBase === 0) return;
-
+ 
   // ── Core CIP calculations ──────────────────────────────────────────────────
   var breakEven    = spotRate * Math.pow((1 + iBase) / (1 + iTarget), T);
   var netCarry     = (iTarget - iBase) * 100;
   var carryPositive = netCarry > 0.25;
-
+ 
   // beMag: magnitude da queda tolerável em tCode/bCode antes do carry zerar
   var beMag           = (spotRate - breakEven) / spotRate * 100;
   var toleranceAnnual = Math.abs((Math.pow((1 + iBase) / (1 + iTarget), 1) - 1) * 100);
-
+ 
   // ── Spread ────────────────────────────────────────────────────────────────
   var spreadPP = (iBase - iTarget) * 100;
   document.getElementById('val-spread').innerHTML =
     (spreadPP >= 0 ? '+' : '') + fmt(spreadPP, 2) + '<span class="unit">pp</span>';
-
+ 
   // ── Spot display ──────────────────────────────────────────────────────────
   document.getElementById('res-spot-display').textContent = fmt(spotRate, 4) + ' ' + tCode + '/' + bCode;
   document.getElementById('res-spot-sub').textContent     = tCode + ' por unidade de ' + bCode;
-
+ 
   // ── Break-even hero ───────────────────────────────────────────────────────
   document.getElementById('res-breakeven').textContent = fmt(breakEven, 4) + ' ' + tCode + '/' + bCode;
-
+ 
   if (carryPositive) {
     document.getElementById('res-breakeven-sub').textContent =
       tCode + '/' + bCode + ' pode cair até ' + fmt(breakEven, 4)
@@ -1234,7 +1175,7 @@ function calculate() {
     document.getElementById('res-breakeven-sub').textContent =
       'spread insuficiente para carry trade significativo';
   }
-
+ 
   // ── Gauge ─────────────────────────────────────────────────────────────────
   if (carryPositive) {
     document.getElementById('gauge-fill').style.width   = '50%';
@@ -1253,9 +1194,9 @@ function calculate() {
     document.getElementById('gauge-desc').textContent   =
       bCode + ' rende mais que ' + tCode + ' nessa configuração · use ⇄ para inverter o par.';
   }
-
+ 
   // ── Result cards ──────────────────────────────────────────────────────────
-
+ 
   // fx tolerance acumulada
   var fxLossEl = document.getElementById('res-fx-loss');
   if (carryPositive) {
@@ -1265,230 +1206,37 @@ function calculate() {
     fxLossEl.textContent = '—';
     fxLossEl.className   = 'r-value neutral';
   }
-
+ 
   // Reset chart cache and fetch new history
   fxFullData = { labels: [], values: [], base: null, target: null };
   clearFxDrag();
   fetchFxHistory(bCode, tCode, breakEven);
 }
-
-// ─── BACKTEST ────────────────────────────────────────────────────────────────
-
-function populateBtYears() {
-  var sel = document.getElementById('bt-entry-year');
-  if (!sel) return;
-  sel.innerHTML = '';
-  var today   = new Date();
-  var maxYear = today.getFullYear() - 1;
-  var minYear = 2000; // rateHistory starts at 1999, so first entry year with prior rates is 2000
-  for (var y = maxYear; y >= minYear; y--) {
-    var opt = document.createElement('option');
-    opt.value = y;
-    opt.textContent = y;
-    sel.appendChild(opt);
-  }
-  sel.addEventListener('change', updateBtPreview);
-  updateBtPreview();
-}
-
-function updateBtPreview() {
-  var bCode   = document.getElementById('sel-base').value;
-  var tCode   = document.getElementById('sel-target').value;
-  var year    = parseInt(document.getElementById('bt-entry-year').value);
-  var preview = document.getElementById('bt-rates-preview');
-  if (!preview || isNaN(year)) return;
-
-  var rBase   = getRateForYear(bCode, year - 1);
-  var rTarget = getRateForYear(tCode, year - 1);
-  var spread  = rTarget - rBase;
-
-  preview.innerHTML =
-    '<span style="color:var(--muted)">taxas vigentes em 1 jan ' + year + '</span><br>'
-    + escapeHtml(bCode) + ' (funding): <span style="color:var(--text)">' + rBase.toFixed(2) + '% a.a.</span><br>'
-    + escapeHtml(tCode) + ' (investment): <span style="color:var(--text)">' + rTarget.toFixed(2) + '% a.a.</span><br>'
-    + 'spread: <span style="color:' + (spread >= 0 ? 'var(--positive)' : 'var(--negative)') + '">'
-    + (spread >= 0 ? '+' : '') + spread.toFixed(2) + ' p.p.</span>';
-}
-
-function getRateForYear(code, year) {
-  var d = CURRENCIES[code];
-  if (!d || !d.rateHistory) return 2.0;
-  var hist = d.rateHistory;
-  for (var i = 0; i < hist.length; i++) {
-    if (hist[i].y === year) return hist[i].r;
-  }
-  var best = hist[0];
-  for (var i = 1; i < hist.length; i++) {
-    if (Math.abs(hist[i].y - year) < Math.abs(best.y - year)) best = hist[i];
-  }
-  return best.r;
-}
-
-async function runBacktest() {
-  var thisGen = ++backtestGeneration;
-
-  var bCode   = document.getElementById('sel-base').value;
-  var tCode   = document.getElementById('sel-target').value;
-  var year    = parseInt(document.getElementById('bt-entry-year').value);
-  var loading = document.getElementById('bt-loading');
-  var results = document.getElementById('bt-results');
-  var errorEl = document.getElementById('bt-error');
-  var runBtn  = document.getElementById('bt-run-btn');
-
-  if (isNaN(year)) return;
-
-  errorEl.style.display  = 'none';
-  results.style.display  = 'none';
-  loading.style.display  = 'flex';
-  runBtn.disabled = true;
-  runBtn.style.opacity = '0.5';
-
-  var iBase   = getRateForYear(bCode, year - 1) / 100;
-  var iTarget = getRateForYear(tCode, year - 1) / 100;
-
-  var entryStr = year + '-01-01';
-  var exitStr  = (year + 1) + '-01-01';
-
-  try {
-    var entryRes = await fetchHistoricalRate(bCode, tCode, entryStr);
-    var exitRes  = await fetchHistoricalRate(bCode, tCode, exitStr);
-
-    // Guard: user changed pair mid-fetch
-    if (thisGen !== backtestGeneration) return;
-
-    var entryFx  = entryRes.rate;
-    var exitFx   = exitRes.rate;
-
-    // Validate
-    if (!isFinite(entryFx) || entryFx <= 0 || !isFinite(exitFx) || exitFx <= 0) {
-      throw new Error('câmbio inválido retornado pela API');
-    }
-
-    var netCarry    = (iTarget - iBase) * 100;
-    var breakEvenBt = entryFx * Math.pow((1 + iBase) / (1 + iTarget), 1);
-    var fxChange    = (exitFx - entryFx) / entryFx * 100;
-    var netReturn   = netCarry - fxChange;
-
-    document.getElementById('bt-entry-fx').textContent      = entryFx.toFixed(6) + ' ' + tCode + '/' + bCode;
-    document.getElementById('bt-entry-date-lbl').textContent = entryRes.date + ' (1º dia útil)';
-    document.getElementById('bt-exit-fx').textContent       = exitFx.toFixed(6)  + ' ' + tCode + '/' + bCode;
-    document.getElementById('bt-exit-date-lbl').textContent  = exitRes.date + ' (1º dia útil)';
-
-    var fxEl = document.getElementById('bt-fx-change');
-    fxEl.textContent = (fxChange >= 0 ? '+' : '') + fxChange.toFixed(2) + '%';
-    fxEl.className   = 'r-value ' + (fxChange >= 0 ? 'negative' : 'positive');
-
-    var carryEl = document.getElementById('bt-carry');
-    carryEl.textContent = (netCarry >= 0 ? '+' : '') + netCarry.toFixed(2) + '%';
-    carryEl.className   = 'r-value ' + (Math.abs(netCarry) >= 0.25 ? 'positive' : 'negative');
-    document.getElementById('bt-carry-sub').textContent =
-      bCode + ' ' + (iBase*100).toFixed(2) + '% · ' + tCode + ' ' + (iTarget*100).toFixed(2) + '% · vigentes jan/' + year;
-
-    document.getElementById('bt-breakeven').textContent = breakEvenBt.toFixed(6) + ' ' + tCode + '/' + bCode;
-
-    var netEl = document.getElementById('bt-net');
-    netEl.textContent = (netReturn >= 0 ? '+' : '') + netReturn.toFixed(2) + '%';
-    netEl.className   = 'r-value ' + (netReturn >= 0 ? 'positive' : 'negative');
-
-    // Verdict
-    var v = document.getElementById('bt-verdict');
-    if (Math.abs(netCarry) < 0.25) {
-      v.className = 'verdict neutral';
-      v.innerHTML = '<strong>↳ spread insignificante em ' + year + '</strong>'
-        + ' diferencial de juros de apenas ' + Math.abs(netCarry).toFixed(2) + ' p.p. — insuficiente para carry trade.';
-    } else if (netReturn > 0) {
-      v.className = 'verdict gap';
-      v.innerHTML = '<strong>↳ operação lucrativa em ' + year + '</strong>'
-        + ' carry de ' + (netCarry >= 0 ? '+' : '') + netCarry.toFixed(2) + '% superou a variação cambial de '
-        + (fxChange >= 0 ? '+' : '') + fxChange.toFixed(2) + '%.'
-        + ' retorno líquido: <strong>' + (netReturn >= 0 ? '+' : '') + netReturn.toFixed(2) + '%</strong>.'
-        + ' câmbio de saída (' + exitFx.toFixed(6) + ') ficou '
-        + (exitFx < breakEvenBt ? 'abaixo' : 'acima') + ' do break-even (' + breakEvenBt.toFixed(6) + ').';
-    } else {
-      v.className = 'verdict nogap';
-      v.innerHTML = '<strong>↳ operação deficitária em ' + year + '</strong>'
-        + ' variação cambial de ' + (fxChange >= 0 ? '+' : '') + fxChange.toFixed(2) + '%'
-        + ' consumiu o carry de ' + (netCarry >= 0 ? '+' : '') + netCarry.toFixed(2) + '%.'
-        + ' retorno líquido: <strong>' + netReturn.toFixed(2) + '%</strong>.'
-        + ' câmbio de saída (' + exitFx.toFixed(6) + ') ultrapassou o break-even (' + breakEvenBt.toFixed(6) + ').';
-    }
-
-    loading.style.display = 'none';
-    results.style.display = 'block';
-
-  } catch(e) {
-    if (thisGen !== backtestGeneration) return;
-    loading.style.display = 'none';
-    errorEl.textContent   = 'erro ao buscar câmbio histórico para ' + year + ': ' + e.message;
-    errorEl.style.display = 'block';
-  } finally {
-    runBtn.disabled = false;
-    runBtn.style.opacity = '1';
-  }
-}
-
-async function fetchHistoricalRate(base, target, dateStr) {
-  var symbols = [];
-  if (base !== 'EUR')   symbols.push(base);
-  if (target !== 'EUR') symbols.push(target);
-
-  // Source 1: frankfurter.app
-  try {
-    var url  = 'https://api.frankfurter.app/' + dateStr + '?from=EUR&to=' + symbols.join(',');
-    var resp = await fetchWithTimeout(url, 10000);
-    var data = await resp.json();
-    if (data.rates && data.date) {
-      var eurBase   = base   === 'EUR' ? 1 : data.rates[base];
-      var eurTarget = target === 'EUR' ? 1 : data.rates[target];
-      if (eurBase && eurTarget) {
-        var rate = eurTarget / eurBase;
-        if (isFinite(rate) && rate > 0) return { rate: rate, date: data.date };
-      }
-    }
-  } catch(e) {}
-
-  // Source 2: frankfurter.dev v1
-  try {
-    var url2  = 'https://api.frankfurter.dev/v1/' + dateStr + '?from=EUR&to=' + symbols.join(',');
-    var resp2 = await fetchWithTimeout(url2, 10000);
-    var data2 = await resp2.json();
-    if (data2.rates && data2.date) {
-      var eurBase2   = base   === 'EUR' ? 1 : data2.rates[base];
-      var eurTarget2 = target === 'EUR' ? 1 : data2.rates[target];
-      if (eurBase2 && eurTarget2) {
-        var rate2 = eurTarget2 / eurBase2;
-        if (isFinite(rate2) && rate2 > 0) return { rate: rate2, date: data2.date };
-      }
-    }
-  } catch(e) {}
-
-  throw new Error('Frankfurter indisponível para ' + dateStr + ' — verifique sua conexão');
-}
-
+ 
 // ─── AUTO BACKTEST ───────────────────────────────────────────────────────────
 // Runs carry trade simulation for every available 1-year window using
 // historical rates from rateHistory and FX from Frankfurter API.
-
+ 
 var autobtGeneration = 0;
-
+ 
 async function runAutoBacktest() {
   var thisGen = ++autobtGeneration;
   var bCode = document.getElementById('sel-base').value;
   var tCode = document.getElementById('sel-target').value;
-
+ 
   var loadingEl = document.getElementById('autobt-loading');
   var verdictEl = document.getElementById('autobt-verdict');
   var statsEl   = document.getElementById('autobt-stats');
   var tableEl   = document.getElementById('autobt-table-wrap');
   var tbodyEl   = document.getElementById('autobt-tbody');
-
+ 
   // Reset UI
   verdictEl.style.display = 'none';
   statsEl.style.display   = 'none';
   tableEl.style.display   = 'none';
   loadingEl.style.display = 'flex';
   loadingEl.innerHTML = '<div style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;"></div> buscando série cambial completa...';
-
+ 
   // Build rate lookup maps
   var bHist = CURRENCIES[bCode].rateHistory;
   var tHist = CURRENCIES[tCode].rateHistory;
@@ -1496,7 +1244,7 @@ async function runAutoBacktest() {
   var tYears = {};
   bHist.forEach(function(h) { bYears[h.y] = h.r; });
   tHist.forEach(function(h) { tYears[h.y] = h.r; });
-
+ 
   var today = new Date();
   var maxExit = today.getFullYear();
   var windows = [];
@@ -1505,25 +1253,25 @@ async function runAutoBacktest() {
       windows.push(y);
     }
   }
-
+ 
   if (!windows.length) {
     loadingEl.innerHTML = '<span style="color:var(--warn);">sem janelas disponíveis para este par</span>';
     return;
   }
-
+ 
   // ── BULK FETCH: single request for entire date range via Frankfurter ──
   // Fetch full time series from EUR cross, then extract Jan 1st of each year.
   var minYear = windows[0];
   var maxYear = windows[windows.length - 1] + 1;
   var fromDate = minYear + '-01-01';
   var toDate   = maxYear + '-01-31'; // a bit past Jan 1st of exit year
-
+ 
   var symbols = [];
   if (bCode !== 'EUR') symbols.push(bCode);
   if (tCode !== 'EUR') symbols.push(tCode);
-
+ 
   var fxByDate = {}; // date string -> cross rate
-
+ 
   // Try bulk fetch from frankfurter
   var bulkOk = false;
   try {
@@ -1546,7 +1294,7 @@ async function runAutoBacktest() {
       bulkOk = Object.keys(fxByDate).length > 10;
     }
   } catch(e) {}
-
+ 
   // Fallback: try frankfurter.dev
   if (!bulkOk) {
     try {
@@ -1568,14 +1316,14 @@ async function runAutoBacktest() {
       }
     } catch(e) {}
   }
-
+ 
   if (thisGen !== autobtGeneration) return;
-
+ 
   if (!bulkOk) {
     loadingEl.innerHTML = '<span style="color:var(--warn);">⚠ histórico cambial indisponível — verifique sua conexão</span>';
     return;
   }
-
+ 
   // For each window year, find the closest available date to Jan 1st
   function findClosestRate(targetDate) {
     // Try exact match first, then scan forward up to 10 days (business day adjustment)
@@ -1587,20 +1335,20 @@ async function runAutoBacktest() {
     }
     return null;
   }
-
+ 
   // Calculate results for each window
   var results = [];
   windows.forEach(function(y) {
     var entryFx = findClosestRate(y + '-01-01');
     var exitFx  = findClosestRate((y + 1) + '-01-01');
     if (!entryFx || !exitFx || !isFinite(entryFx) || !isFinite(exitFx)) return;
-
+ 
     var iBase   = bYears[y - 1] / 100;
     var iTarget = tYears[y - 1] / 100;
     var netCarry = (iTarget - iBase) * 100;
     var fxChange = (exitFx - entryFx) / entryFx * 100;
     var netReturn = netCarry - fxChange;
-
+ 
     results.push({
       year: y,
       spread: netCarry,
@@ -1609,34 +1357,26 @@ async function runAutoBacktest() {
       win: netReturn > 0
     });
   });
-
+ 
   if (thisGen !== autobtGeneration) return;
-
+ 
   if (!results.length) {
     loadingEl.innerHTML = '<span style="color:var(--warn);">não foi possível calcular nenhuma janela</span>';
     return;
   }
-
+ 
+  // Store results globally for tolerance recalculation
+  window._autobtResults = results;
+  window._autobtCurrentSpread = (parseFloat(document.getElementById('inp-rate-target').value) || 0) -
+                                 (parseFloat(document.getElementById('inp-rate-base').value) || 0);
+ 
   // Stats
   var totalWins = results.filter(function(r) { return r.win; }).length;
   var totalLosses = results.length - totalWins;
   var avgReturn = results.reduce(function(s, r) { return s + r.netReturn; }, 0) / results.length;
   var worstReturn = Math.min.apply(null, results.map(function(r) { return r.netReturn; }));
-  var bestReturn  = Math.max.apply(null, results.map(function(r) { return r.netReturn; }));
   var winRate = (totalWins / results.length * 100);
-
-  // Current spread
-  var currentSpread = (parseFloat(document.getElementById('inp-rate-target').value) || 0) -
-                      (parseFloat(document.getElementById('inp-rate-base').value) || 0);
-
-  // Filter windows where spread was in the same direction AND at least half the current magnitude
-  var spreadMin = Math.min(currentSpread * 0.5, currentSpread - 3);
-  var spreadMax = Math.max(currentSpread * 1.5, currentSpread + 3);
-  var similarSpread = results.filter(function(r) {
-    return r.spread >= spreadMin && r.spread <= spreadMax;
-  });
-  var similarWins = similarSpread.filter(function(r) { return r.win; }).length;
-
+ 
   // Populate stats
   document.getElementById('autobt-total').textContent = results.length;
   document.getElementById('autobt-wins').textContent = totalWins + ' (' + winRate.toFixed(0) + '%)';
@@ -1645,7 +1385,7 @@ async function runAutoBacktest() {
   avgEl.textContent = (avgReturn >= 0 ? '+' : '') + avgReturn.toFixed(2) + '%';
   avgEl.className = 'r-value ' + (avgReturn >= 0 ? 'positive' : 'negative');
   document.getElementById('autobt-worst').textContent = worstReturn.toFixed(2) + '%';
-
+ 
   // Build table
   tbodyEl.innerHTML = '';
   results.forEach(function(r) {
@@ -1659,11 +1399,42 @@ async function runAutoBacktest() {
       + '<td style="padding:6px 10px;text-align:center;">' + (r.win ? '<span style="color:var(--positive);">✓</span>' : '<span style="color:var(--negative);">✗</span>') + '</td>';
     tbodyEl.appendChild(row);
   });
-
-  // Build verdict
+ 
+  // Show everything
+  loadingEl.style.display = 'none';
+  statsEl.style.display   = 'flex';
+  tableEl.style.display   = 'block';
+  document.getElementById('autobt-tolerance-row').style.display = 'flex';
+ 
+  // Build verdict (also called on tolerance change)
+  updateAutobtVerdict();
+}
+ 
+function updateAutobtVerdict() {
+  var results = window._autobtResults;
+  if (!results || !results.length) return;
+ 
+  var currentSpread = window._autobtCurrentSpread || 0;
+  var tolerance = parseFloat(document.getElementById('autobt-tolerance').value) || 2;
+ 
+  var totalWins = results.filter(function(r) { return r.win; }).length;
+  var avgReturn = results.reduce(function(s, r) { return s + r.netReturn; }, 0) / results.length;
+  var worstReturn = Math.min.apply(null, results.map(function(r) { return r.netReturn; }));
+  var bestReturn  = Math.max.apply(null, results.map(function(r) { return r.netReturn; }));
+  var winRate = (totalWins / results.length * 100);
+ 
+  // Filter by tolerance
+  var spreadMin = currentSpread - tolerance;
+  var spreadMax = currentSpread + tolerance;
+  var similarSpread = results.filter(function(r) {
+    return r.spread >= spreadMin && r.spread <= spreadMax;
+  });
+  var similarWins = similarSpread.filter(function(r) { return r.win; }).length;
+ 
+  var verdictEl = document.getElementById('autobt-verdict');
   var verdictText = '';
   var verdictClass = '';
-
+ 
   if (winRate >= 60) {
     verdictClass = 'verdict gap';
     verdictText = '<strong>↳ em ' + results.length + ' janelas de 1 ano, o carry se pagou em ' + totalWins + ' (' + winRate.toFixed(0) + '%)</strong>';
@@ -1674,35 +1445,37 @@ async function runAutoBacktest() {
     verdictClass = 'verdict nogap';
     verdictText = '<strong>↳ em ' + results.length + ' janelas de 1 ano, o carry se pagou em apenas ' + totalWins + ' (' + winRate.toFixed(0) + '%)</strong>';
   }
-
+ 
   verdictText += ' retorno médio: ' + (avgReturn >= 0 ? '+' : '') + avgReturn.toFixed(2)
     + '% · melhor: ' + (bestReturn >= 0 ? '+' : '') + bestReturn.toFixed(2)
     + '% · pior: ' + worstReturn.toFixed(2) + '%.';
-
-  if (similarSpread.length >= 3) {
+ 
+  // Similar spread line
+  var similarText = '';
+  if (similarSpread.length > 0) {
     var simWinRate = (similarWins / similarSpread.length * 100).toFixed(0);
-    verdictText += ' em anos com spread de juros comparável ao atual (' + similarSpread.length + ' janelas entre '
-      + fmt(spreadMin, 1) + ' e ' + fmt(spreadMax, 1) + ' p.p.), '
-      + similarWins + ' de ' + similarSpread.length + ' se pagaram (' + simWinRate + '%).';
+    similarText = similarWins + ' de ' + similarSpread.length + ' janelas se pagaram (' + simWinRate
+      + '%) com spread entre ' + fmt(spreadMin, 1) + ' e ' + fmt(spreadMax, 1) + ' p.p.';
+    verdictText += ' ' + similarText;
+  } else {
+    similarText = 'nenhuma janela com spread entre ' + fmt(spreadMin, 1) + ' e ' + fmt(spreadMax, 1) + ' p.p.';
   }
-
+ 
   verdictText += '<br><span style="font-size:10px;color:var(--muted);font-weight:normal;">juros: dados embutidos (taxa de fim de ano, fontes públicas) · câmbio: Frankfurter/ECB · '
     + results.length + ' janelas entre ' + results[0].year + ' e ' + (results[results.length-1].year + 1) + '</span>';
-
+ 
   verdictEl.className = verdictClass;
   verdictEl.innerHTML = verdictText;
-
-  // Show everything
-  loadingEl.style.display = 'none';
   verdictEl.style.display = 'block';
-  statsEl.style.display   = 'flex';
-  tableEl.style.display   = 'block';
+ 
+  // Update inline text next to tolerance input
+  document.getElementById('autobt-similar-text').innerHTML = similarText;
 }
-
+ 
 // ─── FX HISTORY CHART INIT ───────────────────────────────────────────────────
-
+ 
 var chartFx = null;
-
+ 
 function initFxChart() {
   var ctx = document.getElementById('chart-fx').getContext('2d');
   chartFx = new Chart(ctx, {
@@ -1764,7 +1537,7 @@ function initFxChart() {
     }
   });
 }
-
+ 
 function updateFxYAxis(values, breakEvenValue) {
   if (!chartFx || !values || !values.length) return;
   var allVals = values.concat([breakEvenValue]);
@@ -1775,15 +1548,15 @@ function updateFxYAxis(values, breakEvenValue) {
   chartFx.options.scales.y.min = lo - pad;
   chartFx.options.scales.y.max = hi + pad;
 }
-
+ 
 // ─── FX DRAG SELECTION ───────────────────────────────────────────────────────
-
+ 
 var fxDrag = { active: false, startX: null, startIdx: null };
-
+ 
 function initFxDrag() {
   var wrap    = document.getElementById('fx-chart-wrap');
   var overlay = document.getElementById('fx-drag-overlay');
-
+ 
   wrap.addEventListener('mousedown', function(e) {
     if (!chartFx || !chartFx.data.labels.length) return;
     var rect = wrap.getBoundingClientRect();
@@ -1797,7 +1570,7 @@ function initFxDrag() {
     overlay.style.left    = x + 'px';
     overlay.style.width   = '0px';
   });
-
+ 
   wrap.addEventListener('mousemove', function(e) {
     if (!fxDrag.active) return;
     var rect    = wrap.getBoundingClientRect();
@@ -1807,7 +1580,7 @@ function initFxDrag() {
     overlay.style.left  = left + 'px';
     overlay.style.width = width + 'px';
   });
-
+ 
   wrap.addEventListener('mouseup', function(e) {
     if (!fxDrag.active) return;
     fxDrag.active = false;
@@ -1821,12 +1594,12 @@ function initFxDrag() {
     var i1 = Math.max(fxDrag.startIdx, endIdx);
     showFxDragStats(i0, i1);
   });
-
+ 
   wrap.addEventListener('mouseleave', function() {
     if (fxDrag.active) { fxDrag.active = false; }
   });
 }
-
+ 
 function xToDataIndex(x) {
   if (!chartFx || !chartFx.scales || !chartFx.scales.x) return null;
   var scale = chartFx.scales.x;
@@ -1838,7 +1611,7 @@ function xToDataIndex(x) {
   var ratio = (x - leftPx) / (rightPx - leftPx);
   return Math.min(n - 1, Math.max(0, Math.round(ratio * (n - 1))));
 }
-
+ 
 function showFxDragStats(i0, i1) {
   var labels = chartFx.data.labels;
   var values = chartFx.data.datasets[0].data;
@@ -1848,30 +1621,30 @@ function showFxDragStats(i0, i1) {
   if (!v0 || v0 === 0) return;  // prevent division by zero
   var change = (v1 - v0) / v0 * 100;
   var sign   = change >= 0 ? '+' : '';
-
+ 
   var el = document.getElementById('drag-change');
   el.textContent = sign + change.toFixed(2) + '%';
   el.style.color = change >= 0 ? 'var(--negative)' : 'var(--positive)';
-
+ 
   document.getElementById('drag-dates').textContent     = labels[i0] + ' → ' + labels[i1];
   document.getElementById('drag-start-val').textContent = v0.toFixed(6);
   document.getElementById('drag-end-val').textContent   = v1.toFixed(6);
-
+ 
   document.getElementById('fx-drag-stats').style.display = 'flex';
 }
-
+ 
 function clearFxDrag() {
   document.getElementById('fx-drag-overlay').style.display = 'none';
   document.getElementById('fx-drag-stats').style.display   = 'none';
   fxDrag = { active: false, startX: null, startIdx: null };
 }
-
+ 
 // ─── FX HISTORY DATA ─────────────────────────────────────────────────────────
-
+ 
 var fxFullData   = { labels: [], values: [], base: null, target: null };
 var fxBreakEven  = 0;
 var fxActivePeriod = 12;
-
+ 
 function setFxPeriod(months) {
   fxActivePeriod = months;
   var map = {1:'1m',3:'3m',6:'6m',12:'1a',24:'2a',60:'5a'};
@@ -1880,10 +1653,10 @@ function setFxPeriod(months) {
   if (btn) btn.classList.add('active');
   renderFxWindow();
 }
-
+ 
 function renderFxWindow() {
   if (!fxFullData.labels.length) return;
-
+ 
   var today  = new Date();
   var cutoff = new Date(today);
   var yrs    = Math.floor(fxActivePeriod / 12);
@@ -1891,7 +1664,7 @@ function renderFxWindow() {
   cutoff.setFullYear(cutoff.getFullYear() - yrs);
   cutoff.setMonth(cutoff.getMonth() - mos);
   var cutoffStr = cutoff.toISOString().split('T')[0];
-
+ 
   var labels = [], values = [];
   for (var i = 0; i < fxFullData.labels.length; i++) {
     if (fxFullData.labels[i] >= cutoffStr) {
@@ -1900,19 +1673,19 @@ function renderFxWindow() {
     }
   }
   if (!labels.length) return;
-
+ 
   var first  = values[0];
   var last   = values[values.length - 1];
   if (!first || first === 0) return;  // prevent division by zero
   var change = (last - first) / first * 100;
   var high   = Math.max.apply(null, values);
   var low    = Math.min.apply(null, values);
-
+ 
   var changeEl = document.getElementById('fx-stat-change');
   var sign = change >= 0 ? '+' : '';
   changeEl.textContent = sign + change.toFixed(2) + '%';
   changeEl.style.color = change >= 0 ? 'var(--negative)' : 'var(--positive)';
-
+ 
   var periodLabel = fxActivePeriod >= 12
     ? (fxActivePeriod/12) + 'A'
     : fxActivePeriod + 'M';
@@ -1924,12 +1697,12 @@ function renderFxWindow() {
   document.getElementById('fx-stat-high').textContent = high.toFixed(6);
   document.getElementById('fx-stat-low').textContent  = low.toFixed(6);
   document.getElementById('fx-stat-be').textContent   = fxBreakEven.toFixed(6);
-
+ 
   document.getElementById('fx-stats-bar').style.display = 'flex';
-
+ 
   var aboveBe = last > fxBreakEven;
   var lineColor = aboveBe ? '#ff4757' : '#00d4aa';
-
+ 
   var beValues = labels.map(function() { return fxBreakEven; });
   chartFx.data.labels            = labels;
   chartFx.data.datasets[0].data = values;
@@ -1940,28 +1713,28 @@ function renderFxWindow() {
   updateFxYAxis(values, fxBreakEven);
   chartFx.update('none');
 }
-
+ 
 async function fetchFxHistory(base, target, breakEvenValue) {
   var thisGen = ++fetchFxHistoryGeneration;
-
+ 
   var loading = document.getElementById('fx-history-loading');
   var title   = document.getElementById('fx-history-title');
   var src     = document.getElementById('fx-history-source');
   var canvas  = document.getElementById('chart-fx');
-
+ 
   title.textContent = target + '/' + base + ' · histórico cambial vs break-even';
   loading.style.display = 'flex';
   loading.innerHTML = '<div style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;"></div> buscando histórico cambial...';
   canvas.style.display  = 'none';
-
+ 
   var today = new Date();
   var from  = new Date(today);
   from.setFullYear(from.getFullYear() - 5);
-
+ 
   var fmtDate = function(d) {
     return d.toISOString().split('T')[0];
   };
-
+ 
   // Source 1: frankfurter.app — direct
   var tryFrankfurterDirect = async function() {
     var url  = 'https://api.frankfurter.app/' + fmtDate(from) + '..' + fmtDate(today)
@@ -1979,7 +1752,7 @@ async function fetchFxHistory(base, target, breakEvenValue) {
       source: 'frankfurter.app (direto)'
     };
   };
-
+ 
   // Source 2: frankfurter.app via EUR cross
   var tryFrankfurterCross = async function() {
     var url  = 'https://api.frankfurter.app/' + fmtDate(from) + '..' + fmtDate(today)
@@ -1997,7 +1770,7 @@ async function fetchFxHistory(base, target, breakEvenValue) {
       source: 'frankfurter.app (cross EUR)'
     };
   };
-
+ 
   // Source 3: frankfurter.dev v1
   var tryFrankfurterV2 = async function() {
     var url  = 'https://api.frankfurter.dev/v1/' + fmtDate(from) + '..' + fmtDate(today)
@@ -2015,7 +1788,7 @@ async function fetchFxHistory(base, target, breakEvenValue) {
       source: 'frankfurter.dev (cross EUR)'
     };
   };
-
+ 
   // Source 4: jsDelivr fawazahmed0
   var tryJsdelivr = async function() {
     var labels = [], values = [];
@@ -2039,56 +1812,56 @@ async function fetchFxHistory(base, target, breakEvenValue) {
     if (labels.length < 3) throw new Error('insufficient data');
     return { labels: labels, values: values, source: 'jsDelivr · fawazahmed0 · amostras quinzenais' };
   };
-
+ 
   var attempts = [tryFrankfurterDirect, tryFrankfurterCross, tryFrankfurterV2, tryJsdelivr];
-
+ 
   for (var i = 0; i < attempts.length; i++) {
     try {
       var result = await attempts[i]();
-
+ 
       // Guard: pair changed while fetching
       if (thisGen !== fetchFxHistoryGeneration) return;
-
+ 
       fxFullData   = { labels: result.labels, values: result.values, base: base, target: target };
       fxBreakEven  = breakEvenValue;
-
+ 
       loading.style.display = 'none';
       canvas.style.display  = 'block';
-
+ 
       var totalPts = result.labels.length;
       src.textContent = 'fonte: ' + result.source
         + ' · ' + totalPts + ' pontos disponíveis'
         + ' · desde ' + (result.labels[0] || fmtDate(from));
-
+ 
       renderFxWindow();
       return;
-
+ 
     } catch(e) {
       // try next source
     }
   }
-
+ 
   // Guard
   if (thisGen !== fetchFxHistoryGeneration) return;
-
+ 
   loading.style.display = 'flex';
   loading.innerHTML = '<span style="color:var(--warn);">⚠ histórico indisponível para ' + escapeHtml(target) + '/' + escapeHtml(base) + ' — tente outro par ou verifique sua conexão</span>';
 }
-
+ 
 // ─── UTILS ───────────────────────────────────────────────────────────────────
-
+ 
 function fmt(n, dec) {
   if (!isFinite(n)) return '—';
   return n.toLocaleString('pt-BR', { minimumFractionDigits: dec, maximumFractionDigits: dec });
 }
-
+ 
 function escapeHtml(str) {
   if (typeof str !== 'string') return '';
   var div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
 }
-
+ 
 function fetchWithTimeout(url, ms) {
   var controller = new AbortController();
   var timer = setTimeout(function() { controller.abort(); }, ms);
