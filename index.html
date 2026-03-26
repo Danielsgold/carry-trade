@@ -910,8 +910,8 @@ function populateSelects() {
     selBase.innerHTML   += `<option value="${code}">${code}  ${rateStr.padStart(9)}  ·  ${info.name}</option>`;
     selTarget.innerHTML += `<option value="${code}">${code}  ${rateStr.padStart(9)}  ·  ${info.name}</option>`;
   }
-  selBase.value   = 'BRL';
-  selTarget.value = 'JPY';
+  selBase.value   = 'JPY';
+  selTarget.value = 'BRL';
 }
 
 window.addEventListener('DOMContentLoaded', function() {
